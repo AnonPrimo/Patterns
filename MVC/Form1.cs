@@ -21,9 +21,13 @@ namespace MVC
             button1.Visible = false;
 
             comboBoxUser.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxUser.Items.Add("Client");
-            comboBoxUser.Items.Add("Guest");
-            comboBoxUser.Items.Add("Admin");
+            List<string> us = new List<string>();
+            //comboBoxUser.Items.Add("Client");
+            //comboBoxUser.Items.Add("Guest");
+            //comboBoxUser.Items.Add("Admin");
+            us.Add("Client");
+            us.Add("Guest");
+            us.Add("Admin");
             comboBoxUser.SelectedIndex = 0;
 
             Model.TypeOfProducts tp = new Model.TypeOfProducts();
@@ -54,8 +58,8 @@ namespace MVC
                 textBoxPassword.Visible = true;
                 button1.Visible = true;
                 int a = int.Parse(textBoxPassword.Text);
-                if (Model.Password.Check(a))
-                    Model.Change();
+                //if (Model.Password.Check(a))
+                //    Model.Change();
             }
         }
     }

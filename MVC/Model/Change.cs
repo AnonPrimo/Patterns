@@ -8,6 +8,11 @@ namespace MVC.Model
 {
     class Change
     {
-
+        private int num = 0;
+        public int Num(int a)
+        {
+            get { num = a; }
+            set { return num; }
+        }
     }
 }
